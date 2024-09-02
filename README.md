@@ -1,2 +1,6 @@
 # ap01
-examples of applied programming course I
+This repo contains the examples of the course Applied Programming I. 
+
+The examples are sorted by programming language:
+* *asm*: RISC-V assembly 
+
