@@ -30,7 +30,7 @@ The examples run within VS code. The installation of the following extensions fo
 * RISC-V Venus Simulator
 
 ### Hints and tips:
-Please open the leaf directories seperately as folder so that VS code applies the correct language. However... 
+Please open the leaf directories seperately as folder so that VS code applies the correct language. However... do the following before.
 
 ### Python Examples
 - Install [Python](https://www.python.org/downloads/) 
@@ -56,3 +56,16 @@ Please open the leaf directories seperately as folder so that VS code applies th
       ```
       npm i prompt-sync
       ```
+
+### C Examples
+- macOS: install developer tools, open a Terminal and type
+     ```
+     git
+     ````
+    and agree to install.
+- Windows: install GCC with minGW following [this instructions](https://code.visualstudio.com/docs/cpp/config-mingw)
+
+
+
+
+
