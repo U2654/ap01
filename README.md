@@ -34,7 +34,7 @@ Please open the leaf directories seperately as folder so that VS code applies th
 ### C# Examples:
 - To run the C# single examples, install and use [.NET](https://dotnet.microsoft.com/).
 - Install version .NET 8.0
-- **IMPORTANT: Start Visual Studio as follows:**
+- **IMPORTANT (WINDOWS ONLY): Start Visual Studio as follows:**
    - Press Windows key
    - Write: Developer Command Prompt and open it
    - type in the following command:
@@ -47,9 +47,8 @@ Please open the leaf directories seperately as folder so that VS code applies th
 
 1. To run the JavaScript examples, install and use [node.js](https://nodejs.org).
 2. And install prompt-sync:
-   - open a Command Prompt (press Windows key, type cmd and press Enter)
-   - type in the following command: 
+   - open a terminal in VS Code (in menu: Terminal -> New Terminal)
+   - In the opened terminal window, type in the following command: 
       ```
       npm i prompt-sync
       ```
-
