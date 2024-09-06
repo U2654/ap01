@@ -29,9 +29,11 @@ The examples run within VS code. The installation of the following extensions fo
 * RISC-V Support
 * RISC-V Venus Simulator
 
-
 ### Hints and tips:
 Please open the leaf directories seperately as folder so that VS code applies the correct language. However... 
+
+### Python Examples
+- Install [Python](https://www.python.org/downloads/) 
 
 ### C# Examples:
 - To run the C# single examples, install and use [.NET](https://dotnet.microsoft.com/).
@@ -44,11 +46,11 @@ Please open the leaf directories seperately as folder so that VS code applies th
      code .
      ````
 
-      
 ### JavaScript Examples: 
 
 1. To run the JavaScript examples, install and use [node.js](https://nodejs.org).
 2. And install prompt-sync:
+   - (re)start VS Code
    - open a terminal in VS Code (in menu: Terminal -> New Terminal)
    - In the opened terminal window, type in the following command: 
       ```
