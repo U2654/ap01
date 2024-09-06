@@ -26,6 +26,8 @@ The examples run within VS code. The installation of the following extensions fo
 * Python
 * Python Debugger
 * Pylance
+* RISC-V Support
+* RISC-V Venus Simulator
 
 
 ### Hints and tips:
