@@ -4,6 +4,7 @@
 The examples are sorted by programming language:
 * *asm*: RISC-V assembly 
 * *c/singles*: standalone C programs
+* *c/projects*: C projects
 * *py/singles*: standalone Python programs
 * *py/projects*: Python projects
 * *js/singles*: standalone JavaScript programs
