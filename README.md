@@ -10,6 +10,7 @@ The examples are sorted by programming language:
 * *js/singles*: standalone JavaScript programs
 * *js/projects*: JavaScript projects
 * *cs/*: C# console programs
+* *esp* Microcontroller projects for ESP32C6
 
 
 ### 1. Installation of Visual Studio Code:
@@ -31,6 +32,10 @@ The examples run within VS code. The installation of the following extensions fo
 * Pylance
 * RISC-V Support
 * RISC-V Venus Simulator
+
+For the embedded programming part:
+* ESP-IDF (configure 'advanced and install v5.1.4)
+* (optional: Wokwi Simulator) 
 
 ### Hints and tips:
 Please open the leaf directories seperately as folder so that VS code applies the correct language. However... do the following before.
@@ -67,6 +72,12 @@ Please open the leaf directories seperately as folder so that VS code applies th
      ````
     and agree to install.
 - Windows: install GCC with minGW following [this instructions](https://code.visualstudio.com/docs/cpp/config-mingw)
+
+
+### Microcontroller ESP32C6 examples
+- Choose ESP32C6 as device target
+- For debugging on hardware, use Eclipse CDT GDB Adapter
+- For debugging with Wokwi, use Wokwi GDB
 
 
 

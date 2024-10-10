@@ -36,3 +36,11 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# build directories
+######################
+build
+
+# esp managed components etc.
+managed_components
+dependencies.lock

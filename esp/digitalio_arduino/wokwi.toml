@@ -1,0 +1,6 @@
+[wokwi]
+version = 1
+elf = "build/main.elf"
+firmware = "build/main.bin"
+gdbServerPort=3333
+
