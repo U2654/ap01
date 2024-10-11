@@ -10,7 +10,7 @@ The examples are sorted by programming language:
 * *js/singles*: standalone JavaScript programs
 * *js/projects*: JavaScript projects
 * *cs/*: C# console programs
-* *esp* Microcontroller projects for ESP32C6
+* *esp*: Microcontroller projects for ESP32C6
 
 
 ### 1. Installation of Visual Studio Code:
