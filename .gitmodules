@@ -1,0 +1,3 @@
+[submodule "esp/mpu6050_arduino/components/basicMPU6050"]
+	path = esp/mpu6050_arduino/components/basicMPU6050
+	url = https://github.com/U2654/basicMPU6050.git
