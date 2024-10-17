@@ -32,6 +32,7 @@ The examples run within VS code. The installation of the following extensions fo
 * Pylance
 * RISC-V Support
 * RISC-V Venus Simulator
+* Git (Submodule) Assistant
 
 For the embedded programming part:
 * ESP-IDF (configure 'advanced and install v5.1.4)
