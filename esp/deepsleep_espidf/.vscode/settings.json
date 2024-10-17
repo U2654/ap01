@@ -1,0 +1,11 @@
+{
+    "idf.adapterTargetName": "esp32c6",
+    "idf.openOcdConfigs": [
+        "board/esp32c6-builtin.cfg"
+    ],
+    "idf.port": "/dev/tty.usbmodem1201",
+    "idf.flashType": "JTAG",
+    "files.associations": {
+        "timer_hal.h": "c"
+    }
+}
