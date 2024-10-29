@@ -1,24 +1,11 @@
-// Code generated with AI help
-#include "driver/i2c.h"
 #include "esp_log.h"
-
-#define I2C_MASTER_SCL_IO           22    // GPIO number for I2C master clock
-#define I2C_MASTER_SDA_IO           23    // GPIO number for I2C master data
-#define I2C_MASTER_NUM              I2C_NUM_0  // I2C port number for master dev
-#define I2C_MASTER_FREQ_HZ          100000     // I2C master clock frequency
-#define I2C_MASTER_TX_BUF_DISABLE   0          // I2C master doesn't need buffer
-#define I2C_MASTER_RX_BUF_DISABLE   0          // I2C master doesn't need buffer
-#define MPU6050_SENSOR_ADDR         0x68       // I2C address of MPU6050
-#define MPU6050_WHO_AM_I_REG_ADDR   0x75       // Register address for WHO_AM_I
-#define MPU6050_TEMP_HIGH           0X41       // Register address for TEMP_OUT_H
-#define MPU6050_TEMP_LOW            0x42       // Register address for TEMP_OUT_L
-#define MPU6050_PWR_MGMT_1          0x6B       // Register addresse for PWR_MGTM_1
-#define DELAY_PERIOD                500
+#include "driver/i2c.h"
+#include "mpu6050_i2c.h"
 
 static const char *TAG = "MPU6050";
 
 // Function to initialize the I2C master interface
-static esp_err_t i2c_master_init(void) {
+esp_err_t i2c_master_init(void) {
     i2c_config_t conf = {
         .mode = I2C_MODE_MASTER,
         .sda_io_num = I2C_MASTER_SDA_IO,
@@ -35,7 +22,7 @@ static esp_err_t i2c_master_init(void) {
 }
 
 // Function to read a register from the MPU6050
-static esp_err_t mpu6050_read_register(uint8_t reg_addr, uint8_t *data, size_t len) {
+esp_err_t mpu6050_read_register(uint8_t reg_addr, uint8_t *data, size_t len) {
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     i2c_master_start(cmd);
     i2c_master_write_byte(cmd, (MPU6050_SENSOR_ADDR << 1) | I2C_MASTER_WRITE, true);
@@ -49,7 +36,7 @@ static esp_err_t mpu6050_read_register(uint8_t reg_addr, uint8_t *data, size_t l
     return err;
 }
 
-static esp_err_t mpu6050_write_register(uint8_t reg_addr, uint8_t data) {
+esp_err_t mpu6050_write_register(uint8_t reg_addr, uint8_t data) {
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     i2c_master_start(cmd);
     i2c_master_write_byte(cmd, (MPU6050_SENSOR_ADDR << 1) | I2C_MASTER_WRITE, true);
@@ -63,7 +50,7 @@ static esp_err_t mpu6050_write_register(uint8_t reg_addr, uint8_t data) {
 
 
 // Function to initialize the MPU6050
-static esp_err_t mpu6050_check(void) {
+esp_err_t mpu6050_check(void) {
     uint8_t who_am_i = 0;
     esp_err_t err = mpu6050_read_register(MPU6050_WHO_AM_I_REG_ADDR, &who_am_i, 1);
     if (err != ESP_OK) {
@@ -76,21 +63,4 @@ static esp_err_t mpu6050_check(void) {
     }
     ESP_LOGI(TAG, "MPU6050 works...");
     return ESP_OK;
-}
-
-void mpu_read_temperatur() {
-  /* TODO*/
-}
-
-void app_main(void) {
-    ESP_ERROR_CHECK(i2c_master_init());
-    ESP_ERROR_CHECK(mpu6050_check());
-
-    // enable sensor
-    ESP_ERROR_CHECK(mpu6050_write_register(MPU6050_PWR_MGMT_1, 0x0));
-
-    while (1) {
-        mpu_read_temperatur();        
-        vTaskDelay(DELAY_PERIOD / portTICK_PERIOD_MS);
-    }
 }
