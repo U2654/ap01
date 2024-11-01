@@ -9,6 +9,7 @@ The examples are sorted by programming language:
 * *py/projects*: Python projects
 * *js/singles*: standalone JavaScript programs
 * *js/projects*: JavaScript projects
+* *js/websites*: HTML/JavaScript exampels
 * *cs/*: C# console programs
 * *esp*: Microcontroller projects for ESP32C6
 
@@ -33,6 +34,7 @@ The examples run within VS code. The installation of the following extensions fo
 * RISC-V Support
 * RISC-V Venus Simulator
 * Git (Submodule) Assistant
+* Live Preview
 
 For the embedded programming part:
 * ESP-IDF (configure 'advanced and install v5.1.4)

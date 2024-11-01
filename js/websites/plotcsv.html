@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Plot</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Data Plot</h1>
+    <canvas id="chart" width="400" height="200"></canvas>
+    <script>
+        // AI Copilot help...
+        document.addEventListener('DOMContentLoaded', function() {
+            // fetch API load, load file and 
+            fetch('./plotcsv.csv')
+                // the .then calls response.text() if successful on the result
+                // the => is a function definition response in and response.text out
+                .then(response => response.text())
+                // and => means data in and in the function, data is split with ,
+                // into an array, each value of the array is first trimmed (whitespaces)
+                // removed and then mapped to float. The result is the array values.
+                .then(data => {
+                    const values = data.split(',').map(value => parseFloat(value.trim()));
+                    // which is plotted. 
+                    plotData(values);
+                });
+        });
+
+        function plotData(data) {
+            // get the canvas' context 
+            const ctx = document.getElementById('chart').getContext('2d');
+            // new Chart using the libray on the context of the canvas
+            new Chart(ctx, { // draw a line 
+                type: 'line',
+                data: { labels: data.map((_, index) => index + 1), // new array with indices
+                    datasets: [{ label: 'Plot of data',
+                        data: data, // data is input to the function
+                    }]
+                },
+                options: { // options left out, could be axis descriptions etc.
+                }
+            });
+        }
+    </script>
+</body>
+</html>
