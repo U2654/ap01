@@ -12,6 +12,7 @@ The examples are sorted by programming language:
 * *js/websites*: HTML/JavaScript exampels
 * *cs/*: C# console programs
 * *esp*: Microcontroller projects for ESP32C6
+* *unity/* Unity example
 
 
 ### 1. Installation of Visual Studio Code:

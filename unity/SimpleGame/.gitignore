@@ -1,0 +1,73 @@
+# Ignore the Library directory
+Library/
+
+# Ignore the Temp directory
+Temp/
+
+# Ignore the Obj directory
+Obj/
+
+# Ignore the Build directory
+Build/
+
+# Ignore the Logs directory
+Logs/
+
+# Ignore the UserSettings directory
+UserSettings/
+
+# Ignore the MemoryCaptures directory
+MemoryCaptures/
+
+# Ignore the .vs directory (Visual Studio)
+.vs/
+
+# Ignore the .idea directory (JetBrains Rider)
+.idea/
+
+# Ignore the .vscode directory (Visual Studio Code)
+.vscode/
+
+# Ignore the crash reports
+*.crash
+
+# Ignore the auto-generated files
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unityproj
+*.sln
+*.swp
+*.tmp
+*.temp
+*.bak
+*.ncb
+*.log
+*.orig
+*.class
+*.pyc
+*.pyo
+*.dll
+*.mdb
+*.exe
+*.pdb
+*.idb
+*.DS_Store
+*.apk
+*.unitypackage
+*.meta
+
+# Ignore the build output
+Builds/
+
+# Ignore the Unity-generated files
+/Library
+/Temp
+/Obj
+/Build
+/Builds
+/Logs
+/UserSettings
+
