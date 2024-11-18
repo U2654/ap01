@@ -57,7 +57,6 @@ MemoryCaptures/
 *.DS_Store
 *.apk
 *.unitypackage
-*.meta
 
 # Ignore the build output
 Builds/
